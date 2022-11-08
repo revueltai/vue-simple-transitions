@@ -1,10 +1,12 @@
-import { App } from 'vue';
+import { App } from 'vue'
+import { vAnimController } from './helpers/'
 
 import vAnim from './directives/v-anim'
 import vAnimDelay from './directives/v-anim-delay'
 import vAnimDuration from './directives/v-anim-duration'
 
 export {
+  vAnimController,
   vAnim,
   vAnimDelay,
   vAnimDuration

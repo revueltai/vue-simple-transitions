@@ -37,7 +37,7 @@ export const isNumber = (input: any): Boolean => {
  * @param {Boolean} observeOnce - Disconnects the observer when true.
  * @return {Void} Void.
  */
-export const transitionsObserver = (options: IntersectionObserverProperties = {}): void => {
+export const vAnimController = (options: IntersectionObserverProperties = {}): void => {
   if (
     'IntersectionObserver' in window &&
     'IntersectionObserverEntry' in window &&

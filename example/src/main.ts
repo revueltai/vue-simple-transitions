@@ -1,9 +1,5 @@
 import { createApp } from 'vue'
-import {
-  vAnim,
-  vAnimDelay,
-  vAnimDuration
-} from 'vue-simple-transitions'
+import vueSimpleTransitions from 'vue-simple-transitions'
 import 'vue-simple-transitions/styles.css'
 
 import App from './App.vue'
@@ -16,10 +12,7 @@ import '@/assets/styles.css'
 
 const app = createApp(App)
 
-app.directive(vAnim)
-app.directive(vAnimDelay)
-app.directive(vAnimDuration)
-// app.use(vueSimpleTransitions)
+app.use(vueSimpleTransitions)
 
 app.component('c-icon', CIcon)
 app.component('c-button', CButton)

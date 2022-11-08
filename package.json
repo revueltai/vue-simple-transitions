@@ -1,7 +1,7 @@
 {
   "name": "vue-simple-transitions",
   "author": "Ignacio 'Nacho' Revuelta - iamnacho.com",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Easy transitions in Vue",
   "keywords": [
     "vue",
@@ -10,16 +10,18 @@
     "animations",
     "transitions"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revueltai/vue-simple-transitions.git"
+  },
   "license": "MIT",
+  "type": "module",
   "main": "index.js",
-  "files": [
-    "styles.css"
-  ],
   "scripts": {
     "compile": "tsc",
     "clean": "rm -rf dist",
-    "copy-css": "cp ./package/assets/styles.css ./dist/styles.css",
-    "prebuild:package": "npm run clean && npm run compile && node dist/preparePackage.js && npm run copy-css",
+    "copy:css": "cp ./package/assets/styles.css ./dist/styles.css",
+    "prebuild:package": "npm run clean && npm run compile && node dist/preparePackage.js && npm run copy:css",
     "build:package": "cd dist && npm publish"
   },
   "devDependencies": {

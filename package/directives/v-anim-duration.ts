@@ -8,7 +8,7 @@ import { isNumber } from '../helpers/'
 const vAnimDuration = {
   mounted(el: HTMLElement, binding: DirectiveBinding) {
     if (isNumber(binding.value)) {
-      el.style.transitionDuration = `${binding.value}ms`
+      el.style.transitionDuration = `${binding.value || 500}ms`
     }
   }
 }
