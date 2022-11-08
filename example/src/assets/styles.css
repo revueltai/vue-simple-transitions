@@ -1,0 +1,185 @@
+/*
+  Base styles of the project.
+  Simil classes to TailwindCSS. Used to style the example.
+  These styles are not needed for the animations. You can ignore these styles.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Montserrat:wght@300;400;500;700&display=swap');
+
+:root {
+  --spacing-2xs: 0.25rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 2.5rem;
+  --spacing-3xl: 3rem;
+  --spacing-4xl: 4rem;
+  --spacing-5xl: 5rem;
+  --spacing-6xl: 6rem;
+  --spacing-7xl: 10rem;
+
+  --font-size-64: 64px;
+  --font-size-48: 48px;
+  --font-size-36: 36px;
+  --font-size-24: 24px;
+  --font-size-18: 18px;
+  --font-size-16: 16px;
+  --font-size-14: 14px;
+  --font-size-12: 12px;
+  --font-size-10: 10px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: initial;
+  @apply overflow-x-hidden m-0 p-0 text-base text-white font-content font-normal bg-black;
+
+}
+
+img {
+  @apply border-0 h-auto max-w-full;
+  -ms-interpolation-mode: bicubic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  @apply m-0;
+}
+
+strong,
+h1,
+h2,
+h3 {
+  @apply font-bold;
+}
+
+p {
+  @apply text-slate-400;
+}
+
+@screen m {
+  h1 {
+    @apply text-2xl
+  }
+
+  h2 {
+    @apply text-lg
+  }
+
+  h3 {
+    @apply text-base
+  }
+
+  h4 {
+    @apply text-sm
+  }
+
+  h5 {
+    @apply text-xs
+  }
+
+  h6 {
+    @apply text-xs
+  }
+
+  p {
+    @apply text-sm
+  }
+
+  small {
+    @apply text-xs
+  }
+}
+
+@screen t {
+  h1 {
+    @apply text-4xl
+  }
+
+  h2 {
+    @apply text-2xl
+  }
+
+  h3 {
+    @apply text-lg
+  }
+
+  h4 {
+    @apply text-base
+  }
+
+  h5 {
+    @apply text-sm
+  }
+
+  h6 {
+    @apply text-xs
+  }
+
+  p  {
+    @apply text-base
+  }
+
+  small {
+    @apply text-xs
+  }
+}
+
+@screen d {
+  h1{
+    @apply text-5xl
+  }
+
+  h2 {
+    @apply text-4xl
+  }
+
+  h3 {
+    @apply text-2xl
+  }
+
+  h4 {
+    @apply text-lg
+  }
+
+  h5 {
+    @apply text-base
+  }
+
+  h6 {
+    @apply text-sm
+  }
+
+  p {
+    @apply text-lg
+  }
+
+  small {
+    @apply text-xs
+  }
+}

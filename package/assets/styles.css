@@ -1,0 +1,97 @@
+/*
+  Transitions styles.
+  Used by Directives and Observers to trigger and control transitions.
+  Contains transitions for:
+
+  - fade-in
+  - fade-out
+  - slide-x-left
+  - slide-x-right
+  - slide-y-bottom
+  - slide-y-top
+
+  Custom transitions can be added under this format:
+
+  // Base state
+  .--anim.[NAME-OF-YOUR-CLASS] { ... }
+
+  // Animated state
+  .--anim.[NAME-OF-YOUR-CLASS].--animated { ... }
+*/
+
+:root {
+  --v-anim-offset: 1rem;
+  --v-anim-offset-negative: -1rem;
+}
+
+.--anim {
+  will-change: transform, opacity;
+}
+
+strong.--anim,
+span.--anim {
+  display: inline-flex;
+}
+
+.--anim.fade-in,
+.--anim.fade-out {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.--anim.fade-in {
+  opacity: 0;
+}
+
+.--anim.fade-in.--animated {
+  opacity: 1;
+}
+
+.--anim.fade-out {
+  opacity: 1;
+}
+
+.--anim.fade-out.--animated {
+  opacity: 0;
+}
+
+.--anim.slide-x-left,
+.--anim.slide-x-right,
+.--anim.slide-y-bottom,
+.--anim.slide-y-top {
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.--anim.slide-x-left.--animated,
+.--anim.slide-x-right.--animated,
+.--anim.slide-y-bottom.--animated,
+.--anim.slide-y-top.--animated {
+  opacity: 1;
+}
+
+.--anim.slide-x-left.--animated,
+.--anim.slide-x-right.--animated {
+  transform: translateX(0);
+}
+
+.--anim.slide-y-bottom.--animated,
+.--anim.slide-y-top.--animated {
+  transform: translateY(0);
+}
+
+.--anim.slide-x-left {
+  transform: translateX(var(--v-anim-offset-negative));
+}
+
+.--anim.slide-x-right {
+  transform: translateX(var(--v-anim-offset));
+}
+
+.--anim.slide-y-bottom {
+  transform: translateY(var(--v-anim-offset));
+}
+
+.--anim.slide-y-top {
+  transform: translateY(var(--v-anim-offset-negative));
+}
