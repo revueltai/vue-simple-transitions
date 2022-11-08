@@ -41,27 +41,24 @@ app.mount('#app')
 Add the transitions controller to *App.vue*.
 ```vue
 <template>
-	<h1
-		v-anim
-		v-anim-delay="200"
-	>
-		Hello world
-	</h1>
+<h1 v-anim v-anim-delay="200">
+    Hello world
+</h1>
 
-	<your-component
-		v-anim="'slide-x-left'"
-		v-anim-delay="400"
-		v-anim-duration="1200"
-	/>
+<your-component
+    v-anim="'slide-x-left'"
+    v-anim-delay="400"
+    v-anim-duration="1200"
+/>
 </template>
 
 <script setup lang="ts">
-	import { onMounted } from  'vue'
-	import { vAnimController } from  'vue-simple-transitions'
+import { onMounted } from  'vue'
+import { vAnimController } from  'vue-simple-transitions'
 
-	onMounted(() => {
-		vAnimController()
-	})
+onMounted(() => {
+   vAnimController()
+})
 </script>
 ```
 
