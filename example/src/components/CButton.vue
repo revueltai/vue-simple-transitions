@@ -24,7 +24,6 @@
 
     <button
       role="button"
-      :disabled="disabled"
       :class="cssClasses"
       @click="onClick"
       v-else
@@ -45,7 +44,7 @@ import { ref, computed, useSlots } from 'vue'
 
 const CBbutton = ref(null)
 const slots = useSlots()
-const firstChild = slots.default!()[0]
+const firstChild: any = slots.default!()[0]
 
 const emit = defineEmits<{
   (e: 'click'): void
@@ -123,8 +122,6 @@ const hasLinkToId = computed(() => {
 })
 
 const componentLink = computed(() => {
-  // const app = getCurrentInstance()
-  // return app?.$nuxt ? 'nuxt-link' : 'router-link'
   return 'router-link'
 })
 

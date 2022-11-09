@@ -27,7 +27,7 @@ export default {
 <script setup lang="ts">
 import { computed } from 'vue'
 
-const sizes = {
+const sizes: any = {
   '2xs': 4,
   xs: 8,
   sm: 12,
