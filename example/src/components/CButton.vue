@@ -17,6 +17,7 @@
       :class="cssClasses"
       :href="href"
       :target="target"
+      :title="title"
     >
       <slot />
     </a>
@@ -66,6 +67,10 @@ const props = defineProps({
   target: {
     type: String,
     default: '_blank'
+  },
+  title: {
+    type: String,
+    default: ''
   },
   disabled: {
     type: [Object, Boolean],
@@ -124,7 +129,11 @@ const componentLink = computed(() => {
 })
 
 const cssClasses = computed(() => {
-  const payload = [`disabled:opacity-50 focus:outline-none inline-flex gap-xs items-center text-center border`, `${props.backgroundColor} ${props.borderColor} ${props.textColor} ${props.boxShadow}`]
+  const payload = [`disabled:opacity-50 focus:outline-none inline-flex gap-xs items-center text-center hover:opacity-70 transition-opacity duration-500`, `${props.backgroundColor} ${props.textColor} ${props.boxShadow}`]
+
+  if (props.borderColor) {
+    payload.push(`border ${props.borderColor}`)
+  }
 
   if (props.isRounded) {
     payload.push('rounded-md')

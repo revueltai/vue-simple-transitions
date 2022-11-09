@@ -15,8 +15,8 @@
       </p>
     </div>
 
-    <div class="grid gap-lg grid-cols-2 grid-rows-1">
-      <div class="relative z-10">
+    <div class="grid gap-lg d:grid-cols-2 d:grid-rows-1">
+      <div class="c-code relative z-10">
         <div
           v-anim
           class="relative overflow-hidden flex-row border border-gray-800 rounded-sm bg-black/75 backdrop-blur-md"
@@ -32,7 +32,7 @@
             v-anim-delay="100"
             class="flex"
           >
-          <code class="flex-auto relative block py-md px-4xl overflow-auto m:text-14 t:text-16 d:text-18">
+          <code class="flex-auto relative block m:px-xl td:px-4xl py-md overflow-auto m:text-12 t:text-16 d:text-18">
 <span
   v-anim
   v-anim-delay="300"
@@ -71,12 +71,12 @@
         </div>
       </div>
 
-      <div class="-translate-x-4xl translate-y-xl z-0">
+      <div class="d:-translate-x-4xl d:translate-y-xl z-0">
         <div
           v-anim="'slide-x-left'"
           v-anim-delay="1800"
           v-anim-duration="1500"
-          class="h-full flex items-center justify-center rounded-sm bg-blue-700 text-slate-50"
+          class="h-full flex items-center justify-center rounded-sm bg-blue-700 text-slate-50 d:p-5xl mt:py-5xl mt:px-xl"
         >
           <div class="font-bold text-2xl text-center">
             <img
@@ -104,5 +104,11 @@
 }
 .token.c-value {
   @apply text-purple-400;
+}
+
+@screen m {
+  .c-code {
+    max-width: 300px
+  }
 }
 </style>

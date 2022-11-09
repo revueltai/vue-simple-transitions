@@ -47,7 +47,7 @@ const screens = {
   m: { max: '639px' }, // Mobile
   t: { min: '640px', max: '959px' }, // Tablet
   d: '960px', // Desktop
-  mt: '959px', // Mobile and Tablet
+  mt: { max: '959px' }, // Mobile and Tablet
   td: '640px' // Tablet and Desktop
 }
 

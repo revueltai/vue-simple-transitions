@@ -3,7 +3,10 @@
     :is="tag"
     class="c-section"
   >
-    <div class="c-section__wrapper">
+    <div
+      class="c-section__wrapper"
+      :class="cssClassesWrapperSanitized"
+    >
       <slot />
     </div>
   </component>
@@ -16,11 +19,43 @@ export default {
 </script>
 
 <script setup lang="ts">
-defineProps({
+import { computed } from '@vue/reactivity'
+
+const props = defineProps({
   tag: {
     type: String,
     default: 'section'
+  },
+  paddingTop: {
+    type: String,
+    default: 'm:pt-2xl t:pt-5xl d:pt-6xl'
+  },
+  paddingBottom: {
+    type: String,
+    default: 'm:pb-2xl t:pb-5xl d:pb-6xl'
+  },
+  paddingLeft: {
+    type: String,
+    default: 'm:pl-2xl t:pl-5xl d:pl-6xl'
+  },
+  paddingRight: {
+    type: String,
+    default: 'm:pr-2xl t:pr-5xl d:pr-6xl'
+  },
+  cssClassesWrapper: {
+    type: String,
+    default: ''
   }
+})
+
+const cssClassesWrapperSanitized = computed(() => {
+  return [
+    props.paddingLeft,
+    props.paddingRight,
+    props.paddingTop,
+    props.paddingBottom,
+    props.cssClassesWrapper
+  ]
 })
 </script>
 
@@ -29,36 +64,12 @@ defineProps({
   --c-section-max-width: 1200px;
 }
 
-.c-section,
-.c-section__wrapper {
+.c-section {
   @apply relative;
 }
 
 .c-section__wrapper {
-  @apply flex flex-col justify-center my-0 mx-auto;
-  padding-left: var(--spacing-xl);
-  padding-right: var(--spacing-xl);
+  @apply flex flex-col justify-center my-0 mx-auto w-full;
   max-width: var(--c-section-max-width);
-}
-
-@screen m {
-  .c-section__wrapper {
-    padding-top: var(--spacing-2xl);
-    padding-bottom: var(--spacing-2xl);
-  }
-}
-
-@screen t {
-  .c-section__wrapper {
-    padding-top: var(--spacing-5xl);
-    padding-bottom: var(--spacing-5xl);
-  }
-}
-
-@screen d {
-  .c-section__wrapper {
-    padding-top: var(--spacing-7xl);
-    padding-bottom: var(--spacing-7xl);
-  }
 }
 </style>

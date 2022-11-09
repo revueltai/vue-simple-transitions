@@ -1,44 +1,43 @@
 <template>
-  <c-block class="border-y border-gray-900">
-    <h3
+    <h6
       v-anim="'slide-y-top'"
-      class="mb-sm bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-200 text-center"
+      v-anim-delay="400"
+      class="mb-xs mt-xl bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-200 text-center"
     >
       Plays along nicely with
-    </h3>
+    </h6>
 
-    <c-block-horizontal class="mt-xl">
+    <c-block-horizontal direction="'flex-row'">
       <a
         v-anim="'slide-x-left'"
-        v-anim-delay="200"
+        v-anim-delay="600"
         href="https://vuejs.org/"
         target="_blank"
       >
         <img
           src="/logo-vue.svg"
           alt="Vuejs"
-          width="72"
-          height="72"
-          class="opacity-50 hover:opacity-100 transition-opacity cursor-pointer"
+          width="48"
+          height="48"
+          class="opacity-50 hover:opacity-100 duration-500 transition-opacity cursor-pointer"
         />
       </a>
 
       <a
         v-anim="'slide-x-right'"
-        v-anim-delay="200"
+        v-anim-delay="600"
         href="https://nuxtjs.org/"
         target="_blank"
       >
         <img
           src="/logo-nuxt.svg"
           alt="Nuxtjs"
-          width="72"
-          height="72"
-          class="opacity-50 hover:opacity-100 transition-opacity cursor-pointer"
+          width="48"
+          height="48"
+          class="opacity-50 hover:opacity-100 duration-500 transition-opacity cursor-pointer"
         />
       </a>
     </c-block-horizontal>
-  </c-block>
 </template>
 
 <style scoped>

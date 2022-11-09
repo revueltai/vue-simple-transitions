@@ -45,7 +45,7 @@ html,
 body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  height: 100%;
+  @apply w-full h-full;
 }
 
 body {
@@ -80,6 +80,10 @@ h3 {
 
 p {
   @apply text-slate-400;
+}
+
+#app {
+  @apply w-full;
 }
 
 @screen m {
@@ -141,7 +145,7 @@ p {
     @apply text-xs
   }
 
-  p  {
+  p {
     @apply text-base
   }
 
@@ -151,7 +155,7 @@ p {
 }
 
 @screen d {
-  h1{
+  h1 {
     @apply text-5xl
   }
 
