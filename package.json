@@ -14,6 +14,10 @@
     "type": "git",
     "url": "git+https://github.com/revueltai/vue-simple-transitions.git"
   },
+  "bugs": {
+    "url": "https://github.com/revueltai/vue-simple-transitions/issues"
+  },
+  "homepage": "https://github.com/revueltai/vue-simple-transitions",
   "license": "MIT",
   "type": "module",
   "main": "index.js",
@@ -27,6 +31,7 @@
   "devDependencies": {
     "@babel/types": "^7.20.2",
     "@types/node": "^18.11.9",
+    "husky": "^8.0.2",
     "rimraf": "^3.0.2",
     "typescript": "~4.7.4",
     "vue": "^3.2.41"
