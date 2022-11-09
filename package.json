@@ -1,7 +1,7 @@
 {
   "name": "vue-simple-transitions",
   "author": "Ignacio 'Nacho' Revuelta - iamnacho.com",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Easy transitions in Vue",
   "keywords": [
     "vue",
