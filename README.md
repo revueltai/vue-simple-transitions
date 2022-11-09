@@ -39,6 +39,8 @@ app.mount('#app')
 
 ### 2. Enable in App.vue
 Add the transitions controller to *App.vue*.
+
+After that *vAnimController* will observe any instance of the directives in any element or component of your project.
 ```vue
 <template>
 <h1 v-anim v-anim-delay="200">
@@ -69,6 +71,6 @@ onMounted(() => {
 | v-anim-delay | `number` | `500` | Sets the transition-delay to the element/component. |
 | v-anim-duration | `number` | `500` | Sets the transition-duration to the element/component. |
 
-## Sandbox
-Check out the sandbox [here](https://github.com/revueltai/vue-simple-transitions/tree/main/example).
+## Example
+Check out the example project [here](https://github.com/revueltai/vue-simple-transitions/tree/main/example).
 
