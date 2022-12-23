@@ -71,6 +71,27 @@ onMounted(() => {
 | v-anim-delay | `number` | `500` | Sets the transition-delay to the element/component. |
 | v-anim-duration | `number` | `500` | Sets the transition-duration to the element/component. |
 
-## Example
-Check out the example project [here](https://github.com/revueltai/vue-simple-transitions/tree/main/example).
+## Transitions
+By default vue-simple-transitions includes these transitions:
 
+- `fade-in`
+- `fade-out`
+- `slide-x-left`
+- `slide-x-right`
+- `slide-y-bottom`
+- `slide-y-top`
+
+Custom transitions can be added in CSS under this format:
+```css
+/* Base state */
+.--anim.[NAME-OF-YOUR-CLASS] { ... }
+/* .--anim.my-custom-transition { ... } */
+
+/* Animated state */
+.--anim.[NAME-OF-YOUR-CLASS].--animated { ... }
+/* .--anim.my-custom-transition.--animated { ... } */
+```
+
+## Examples
+- Check out the example project [here](https://github.com/revueltai/vue-simple-transitions/tree/main/example).
+- Check the demo website [here](https://vue-simple-transitions.netlify.app/)
